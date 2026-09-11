@@ -5,7 +5,9 @@
       "release-type": "python",
       "package-name": "loomground-drift",
       "changelog-path": "CHANGELOG.md",
-      "version-file": "src/loomground_drift/_version.py"
+      "extra-files": [
+        "src/loomground_drift/_version.py"
+      ]
     }
   }
 }
