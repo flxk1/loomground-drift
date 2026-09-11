@@ -2,6 +2,18 @@
 <!-- Copyright 2026 flxk1 -->
 # Changelog
 
+## [0.2.0](https://github.com/flxk1/loomground-drift/compare/loomground-drift-v0.1.0...loomground-drift-v0.2.0) (2026-09-11)
+
+
+### Features
+
+* breaker, drift monitor, oversight drift with injected ports ([c1dafdb](https://github.com/flxk1/loomground-drift/commit/c1dafdb1db9c00e5584bf2b08a1d0da8c0b4703d))
+
+
+### Documentation
+
+* seam map, RVND shim guidance, llms.txt ([5bdd6d7](https://github.com/flxk1/loomground-drift/commit/5bdd6d74a69d741fc713980bf9ed94c2fd9ec665))
+
 ## 0.1.0
 
 Initial extraction. Provenance: RVND commit `bac579b`, `server/src/rvnd/breaker.py`,
