@@ -1,0 +1,47 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 flxk1
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "loomground-drift"
+description = "Leased autonomy that decays unless renewed, tripwires that quarantine, drift measured against a baseline."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+license-files = ["LICENSES/Apache-2.0.txt", "LICENSES/CC-BY-4.0.txt"]
+authors = [{ name = "Loomground Contributors" }]
+# Consumed from loomground-governance: vocabulary("grades") (the grade lattice),
+# vocabulary("verdicts") (the refusal word). Consumed from loomground-audit-chain:
+# mutation_log.{MutationLog, LogEvent} (behavioural events, baselines, findings),
+# witness_escape.recent_witness_escapes (the witness-escape tripwire input).
+dependencies = [
+    "loomground-governance>=0.11,<0.12",
+    "loomground-audit-chain>=0.1,<0.2",
+]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+dev = [
+    "pytest==9.1.1",
+]
+
+[project.urls]
+Homepage = "https://github.com/flxk1/loomground-drift"
+Repository = "https://github.com/flxk1/loomground-drift"
+Issues = "https://github.com/flxk1/loomground-drift/issues"
+
+[tool.setuptools.dynamic]
+version = { attr = "loomground_drift._version.__version__" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["loomground_drift*"]
+
+[tool.setuptools.package-data]
+loomground_drift = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
