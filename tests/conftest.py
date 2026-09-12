@@ -12,10 +12,8 @@ from pathlib import Path
 
 import pytest
 
-#: Value of ``loomground_audit_chain.mutation_log.RVND_LOG_ROOT_ENV`` — a
-#: compatibility constant of the audit chain, named here as its value so the
-#: redirect lands before that module is imported.
-LOG_ROOT_ENV = "RVND_LOG_ROOT"
+#: Public audit-chain log-root setting, installed before that module imports.
+LOG_ROOT_ENV = "LOOMGROUND_LOG_ROOT"
 
 _HOME: Path | None = None
 

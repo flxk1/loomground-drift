@@ -32,6 +32,6 @@ b.status(metrics=sig.metrics, now=1002.0).verdict
 - ports: `drift_monitor.structural_state(folder) → dict` (absent → `structural_unmeasured`, zero findings), `drift_monitor.build_surface`, `levels` (the host's oversight ladder), `breaker.clock`; details in [docs/seam.md](docs/seam.md)
 
 ## Family
-Runtime controls. Consumes `loomground-governance` (`vocabulary("grades")`, `vocabulary("verdicts")`) and `loomground-audit-chain` (`mutation_log`, `witness_escape`). Consumed by hosts, e.g. RVND; optional for every consumer. Catalogue: [loomground/CATALOGUE.md](https://github.com/flxk1/loomground/blob/main/CATALOGUE.md).
+Runtime controls. Consumes `loomground-governance` (`vocabulary("grades")`, `vocabulary("verdicts")`) and `loomground-audit-chain` (`mutation_log`, `witness_escape`). Hosts consume it through the documented ports; it is optional for every consumer. Catalogue: [loomground/CATALOGUE.md](https://github.com/flxk1/loomground/blob/main/CATALOGUE.md).
 
 Language: loomground — guide https://github.com/flxk1/loomground/blob/main/llms.txt (the .lg language an agent reads, emits, validates); catalogue https://github.com/flxk1/loomground/blob/main/CATALOGUE.json

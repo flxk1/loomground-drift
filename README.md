@@ -48,7 +48,7 @@ out: RUNNING L3 ''
 
 ## Family
 
-Runtime controls. Consumes `loomground-governance` (`vocabulary("grades")`, `vocabulary("verdicts")`) and `loomground-audit-chain` (`mutation_log`, `witness_escape`). Consumed by hosts, e.g. RVND; optional for every consumer. Catalogue: [loomground/CATALOGUE.md](https://github.com/flxk1/loomground/blob/main/CATALOGUE.md).
+Runtime controls. Consumes `loomground-governance` (`vocabulary("grades")`, `vocabulary("verdicts")`) and `loomground-audit-chain` (`mutation_log`, `witness_escape`). Hosts consume it through the documented ports; it is optional for every consumer. Catalogue: [loomground/CATALOGUE.md](https://github.com/flxk1/loomground/blob/main/CATALOGUE.md).
 
 ## Status
 

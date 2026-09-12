@@ -12,14 +12,12 @@
 
 ### Documentation
 
-* seam map, RVND shim guidance, llms.txt ([5bdd6d7](https://github.com/flxk1/loomground-drift/commit/5bdd6d74a69d741fc713980bf9ed94c2fd9ec665))
+* host seam map, adapter guidance, llms.txt ([5bdd6d7](https://github.com/flxk1/loomground-drift/commit/5bdd6d74a69d741fc713980bf9ed94c2fd9ec665))
 
 ## 0.1.0
 
-Initial extraction. Provenance: RVND commit `bac579b`, `server/src/rvnd/breaker.py`,
-`server/src/rvnd/drift_monitor.py`, `server/src/rvnd/oversight_drift.py`, relicensed
-from AGPL-3.0-only to Apache-2.0 (code) / CC-BY-4.0 (README) on the
-loomground-workspace extraction precedent, copyright holder unchanged (flxk1).
+Initial public extraction, relicensed from AGPL-3.0-only to Apache-2.0 (code) /
+CC-BY-4.0 (README), copyright holder unchanged (flxk1).
 
 * `breaker`: `Lease`, `Tripwire`, `Breaker`, `cap_grade`, the witness-escape
   tripwire input. Grade lattice read from `loomground_governance.vocabulary("grades")`;
@@ -36,6 +34,5 @@ loomground-workspace extraction precedent, copyright holder unchanged (flxk1).
 * `oversight_drift`: `DriftSignal`, `evaluate`, `drift_tripwire`, `raise_floor`.
   The oversight ladder is injected: `levels` is a required keyword on `evaluate`
   and `raise_floor`; `behavioural_floor` has no default and must be on the ladder.
-* Tests ported from RVND's breaker, witness-escape, drift-monitor and
-  oversight-drift suites and adapted to the injected ports; the party-register,
-  `decide_action` and dispatch-record halves stay with RVND.
+* Breaker, witness-escape, drift-monitor, and oversight-drift tests exercise
+  the public package through its injected ports.
