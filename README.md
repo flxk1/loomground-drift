@@ -11,10 +11,10 @@ A human stops a fast agent too late; drift from baseline goes unseen. Leased aut
 ## Install
 
 ```
-pip install loomground-drift
+pip install git+https://github.com/flxk1/loomground-drift
 ```
 
-Requires `loomground-governance` 0.11 and `loomground-audit-chain` 0.1. Python 3.10+.
+Requires `loomground-governance` 0.11, `loomground-audit-chain` 0.1 and `loomground-workspace` 0.1. Python 3.10+.
 
 ## Usage
 
@@ -41,7 +41,7 @@ out: RUNNING L3 ''
 - `Lease(agent, granted_grade, expires_at, ttl_seconds, granted_at)`: `live(now)`, `effective_grade(now)`, `renew(ok=, now=)`
 - `Tripwire(name, metric, limit, kind)` with `kind` in `max` | `min` | `flag`; `None` is a gap, never a trip
 - `Breaker(lease, tripwires)`: `status(metrics=, now=) → BreakerStatus(state, effective_grade, verdict)`, `renew`, `clear(by=, rationale=)`; `cap_grade(requested, ceiling)`
-- states: RUNNING → the lease's grade; DECAYED → floor grade `levels[0]`; QUARANTINED → floor grade and the `refused` verdict, sticky until a named human clears
+- states: RUNNING → the lease's grade; DECAYED → floor grade `grade_levels()[0]`; QUARANTINED → floor grade and the `refused` verdict, sticky until a named human clears
 - `baseline(folder, log_root=, structural=)`, `drift_tick(folder, log_root=, thresholds=, as_of=, structural=) → DriftReport`, `record_findings`, `finding_surface`
 - `evaluate(report, levels=, behavioural_floor=) → DriftSignal`, `drift_tripwire()`, `raise_floor(current, recommended, levels=)`
 - ports: `drift_monitor.structural_state(folder) → dict` (absent → `structural_unmeasured`, zero findings), `drift_monitor.build_surface`, `levels` (the host's oversight ladder), `breaker.clock`; details in [docs/seam.md](docs/seam.md)
@@ -52,7 +52,11 @@ Runtime controls. Consumes `loomground-governance` (`vocabulary("grades")`, `voc
 
 ## Status
 
-0.1.0 · 118 tests · Python >=3.10 · governance 0.11 · audit-chain 0.1
+0.2.0 · 118 tests · Python >=3.10 · governance 0.11 · audit-chain 0.1
+
+## How this is made
+
+The code and documentation are written with Loomground agents running on Claude (Anthropic). The maintainer reads and corrects all of it.
 
 ## License
 
