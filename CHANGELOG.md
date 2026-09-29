@@ -2,6 +2,20 @@
 <!-- Copyright 2026 flxk1 -->
 # Changelog
 
+## [0.2.1](https://github.com/flxk1/loomground-drift/compare/loomground-drift-v0.2.0...loomground-drift-v0.2.1) (2026-09-29)
+
+
+### Bug Fixes
+
+* **release:** extra-files marker, version 0.2.0 matches the tag ([6a44eed](https://github.com/flxk1/loomground-drift/commit/6a44eeda2be6382b4b7161d922e2ac3b4f12c07d))
+
+
+### Documentation
+
+* correct stale claims; add How this is made ([794a1e6](https://github.com/flxk1/loomground-drift/commit/794a1e603deb5e3ad013cda874ffb9220293c385))
+* correct stale statements and add How this is made ([4102445](https://github.com/flxk1/loomground-drift/commit/41024451ee10d48d8dd38191e4de72309a7757da))
+* How this is made names no model vendor ([496c2e0](https://github.com/flxk1/loomground-drift/commit/496c2e0682b9597a4a07e4c1933bec26878c5ee8))
+
 ## [0.2.0](https://github.com/flxk1/loomground-drift/compare/loomground-drift-v0.1.0...loomground-drift-v0.2.0) (2026-09-11)
 
 
